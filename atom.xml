@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://st253625445.github.io/"/>
-  <updated>2017-09-13T04:27:50.506Z</updated>
+  <updated>2017-09-14T02:39:39.760Z</updated>
   <id>http://st253625445.github.io/</id>
   
   <author>
@@ -17,37 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>article title</title>
-    <link href="http://st253625445.github.io/2017/09/13/article-title/"/>
-    <id>http://st253625445.github.io/2017/09/13/article-title/</id>
-    <published>2017-09-13T04:27:50.000Z</published>
-    <updated>2017-09-13T04:27:50.506Z</updated>
+    <title>开启hexo博客之旅</title>
+    <link href="http://st253625445.github.io/2017/09/14/first/"/>
+    <id>http://st253625445.github.io/2017/09/14/first/</id>
+    <published>2017-09-14T02:33:42.000Z</published>
+    <updated>2017-09-14T02:39:39.760Z</updated>
     
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://st253625445.github.io/2017/09/13/hello-world/"/>
-    <id>http://st253625445.github.io/2017/09/13/hello-world/</id>
-    <published>2017-09-13T04:10:16.244Z</published>
-    <updated>2017-09-13T03:42:16.805Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>从一开始就有搭建自己的博客的想法，但是都没有坚持下来。最近看到github 的个人博客开发，觉得挺适合自己的，不用买服务器，前期也不用买域名，就网上查了教程自己搭建了个，虽然不算新鲜东西，但也算是自己的博客起步之旅把。<br>这个博客将会记录自己的心情，学习，笔记。<br>文笔不好，就这些了。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;从一开始就有搭建自己的博客的想法，但是都没有坚持下来。最近看到github 的个人博客开发，觉得挺适合自己的，不用买服务器，前期也不用买域名，就网上查了教程自己搭建了个，虽然不算新鲜东西，但也算是自己的博客起步之旅把。&lt;br&gt;这个博客将会记录自己的心情，学习，笔记。&lt;br&gt;
       
     
     </summary>
     
+    
+      <category term="心情随笔" scheme="http://st253625445.github.io/tags/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

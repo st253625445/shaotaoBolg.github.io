@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="其他分享," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="动机由于自己很久以前就有搭建博客的想法，但迟迟没有实现，相信很多同学都跟我一样有这样的问题。所有就想把自己搭建的过程给大家分享下，同时给自己的博客扩充点东西，写的不好的话，大家多多担待。 环境配置node,gitnode配置就不多说了，相信来看这篇博文的同学基本都是会的，即使不会网上也有很多资料能查到，我这就不多说给个地址把node中文网: http://nodejs.cn/  安装好node环境">
+<meta name="keywords" content="其他分享">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo 搭建个人博客">
+<meta property="og:url" content="http://st253625445.github.io/2017/09/14/hexo/index.html">
+<meta property="og:site_name" content="邵涛的个人博客">
+<meta property="og:description" content="动机由于自己很久以前就有搭建博客的想法，但迟迟没有实现，相信很多同学都跟我一样有这样的问题。所有就想把自己搭建的过程给大家分享下，同时给自己的博客扩充点东西，写的不好的话，大家多多担待。 环境配置node,gitnode配置就不多说了，相信来看这篇博文的同学基本都是会的，即使不会网上也有很多资料能查到，我这就不多说给个地址把node中文网: http://nodejs.cn/  安装好node环境">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-14T07:38:49.026Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo 搭建个人博客">
+<meta name="twitter:description" content="动机由于自己很久以前就有搭建博客的想法，但迟迟没有实现，相信很多同学都跟我一样有这样的问题。所有就想把自己搭建的过程给大家分享下，同时给自己的博客扩充点东西，写的不好的话，大家多多担待。 环境配置node,gitnode配置就不多说了，相信来看这篇博文的同学基本都是会的，即使不会网上也有很多资料能查到，我这就不多说给个地址把node中文网: http://nodejs.cn/  安装好node环境">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://st253625445.github.io/2017/09/14/hexo/"/>
+
+
+
+
+
+  <title>hexo 搭建个人博客 | 邵涛的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">邵涛的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://st253625445.github.io/2017/09/14/hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="shaotao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="邵涛的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">hexo 搭建个人博客</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T10:59:05+08:00">
+                2017-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/09/14/hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/09/14/hexo/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p>由于自己很久以前就有搭建博客的想法，但迟迟没有实现，相信很多同学都跟我一样有这样的问题。所有就想把自己搭建的过程给大家分享下，同时给自己的博客扩充点东西，写的不好的话，大家多多担待。</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="node-git"><a href="#node-git" class="headerlink" title="node,git"></a>node,git</h3><p>node配置就不多说了，相信来看这篇博文的同学基本都是会的，即使不会网上也有很多资料能查到，我这就不多说给个地址把<br>node中文网: <a href="http://nodejs.cn/" target="_blank" rel="external">http://nodejs.cn/</a> </p>
+<p>安装好node环境后大家就需要装git了，git也不多说，码农基本都用，直接给个地址<br>git安装：<a href="https://tortoisegit.org/" target="_blank" rel="external">https://tortoisegit.org/</a></p>
+<h3 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h3><p>既然咱们需要将页面搭建在github上，当然首先需要一个账号了。<br>登录后新建一个仓库（new repository），并命名为YourSiteName.github.io/com，此时Github会帮助你初始化一个静态网页，你可以根据自己的喜好选择一些模版，接着尝试访问下你所建的站点，成功后就可以开始动工了。</p>
+<h2 id="Hexo初始化博客框架"><a href="#Hexo初始化博客框架" class="headerlink" title="Hexo初始化博客框架"></a>Hexo初始化博客框架</h2><h3 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+</code></pre><h3 id="2-初始化框架"><a href="#2-初始化框架" class="headerlink" title="2. 初始化框架"></a>2. 初始化框架</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;yourFolder&gt;</div><div class="line">$ <span class="built_in">cd</span> &lt;yourFolder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+</code></pre><h3 id="3-新建文章（创建一个Hello-World）"><a href="#3-新建文章（创建一个Hello-World）" class="headerlink" title="3. 新建文章（创建一个Hello World）"></a>3. 新建文章（创建一个Hello World）</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"Hello World"</span></div></pre></td></tr></table></figure>
+</code></pre><p>在/source/_post里添加hello-world.md文件，之后新建的文章都将存放在此目录下。</p>
+<h3 id="4-生成网站"><a href="#4-生成网站" class="headerlink" title="4. 生成网站"></a>4. 生成网站</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">//$ hexo g 简写</div></pre></td></tr></table></figure>
+</code></pre><p>此时会将/source的.md文件生成到/public中，形成网站的静态文件。</p>
+<h3 id="5-服务器"><a href="#5-服务器" class="headerlink" title="5. 服务器"></a>5. 服务器</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p 3000  //端口3000</div><div class="line">// hexo s  简写，默认端口4000</div></pre></td></tr></table></figure>
+</code></pre><p>输入<a href="http://localhost:3000" target="_blank" rel="external">http://localhost:3000</a> 即可查看网站，当前只为本地查看。</p>
+<h3 id="6-部署网站"><a href="#6-部署网站" class="headerlink" title="6. 部署网站"></a>6. 部署网站</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+</code></pre><p>部署网站为 将静态博客上传到git上，部署前需要进行配置，将hexo与github关联起来，下面详细介绍该步操作。</p>
+<h2 id="hexo-与-github-关联"><a href="#hexo-与-github-关联" class="headerlink" title="hexo 与 github 关联"></a>hexo 与 github 关联</h2><h3 id="1-git配置密钥"><a href="#1-git配置密钥" class="headerlink" title="1.git配置密钥"></a>1.git配置密钥</h3><p>这步网上很多教程，不过多描述。</p>
+<h3 id="2-hexo配置"><a href="#2-hexo配置" class="headerlink" title="2.hexo配置"></a>2.hexo配置</h3><p>打开根目录下的 _config.yml配置文件，配置成你所要部署的站点：<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:YourRepository.git  //修改成你的地址</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>安装组件<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>这样就配置完成，然后重新生成及部署<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo clean  //清除生成</div><div class="line"></div><div class="line">hexo generate  //生成</div><div class="line"></div><div class="line">hexo deploy  //部署</div></pre></td></tr></table></figure></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>简单的个人博客就搭建好了，当然现在的博客样子并不是你想要的，你需要更改样式主题，目前比较流行的主题就是next了，可以去网上看看配置文档咯。<br>OK 篇幅不算长，但也写了半天，写的不好，多多体谅。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/其他分享/" rel="tag"># 其他分享</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/14/first/" rel="next" title="开启hexo博客之旅">
+                <i class="fa fa-chevron-left"></i> 开启hexo博客之旅
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/avatar.gif"
+              alt="shaotao" />
+          
+            <p class="site-author-name" itemprop="name">shaotao</p>
+            <p class="site-description motion-element" itemprop="description">邵涛的个人博客,学习笔记，心情博客等内容。</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动机"><span class="nav-number">1.</span> <span class="nav-text">动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">2.</span> <span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#node-git"><span class="nav-number">2.1.</span> <span class="nav-text">node,git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github配置"><span class="nav-number">2.2.</span> <span class="nav-text">github配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo初始化博客框架"><span class="nav-number">3.</span> <span class="nav-text">Hexo初始化博客框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Hexo"><span class="nav-number">3.1.</span> <span class="nav-text">1. 安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-初始化框架"><span class="nav-number">3.2.</span> <span class="nav-text">2. 初始化框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-新建文章（创建一个Hello-World）"><span class="nav-number">3.3.</span> <span class="nav-text">3. 新建文章（创建一个Hello World）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-生成网站"><span class="nav-number">3.4.</span> <span class="nav-text">4. 生成网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-服务器"><span class="nav-number">3.5.</span> <span class="nav-text">5. 服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-部署网站"><span class="nav-number">3.6.</span> <span class="nav-text">6. 部署网站</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-与-github-关联"><span class="nav-number">4.</span> <span class="nav-text">hexo 与 github 关联</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-git配置密钥"><span class="nav-number">4.1.</span> <span class="nav-text">1.git配置密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-hexo配置"><span class="nav-number">4.2.</span> <span class="nav-text">2.hexo配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">5.</span> <span class="nav-text">最后</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">shaotao</span>
+
+  
+</div>
+
+
+  <!--<div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>-->
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://st253625445.github.io/2017/09/14/hexo/';
+          this.page.identifier = '2017/09/14/hexo/';
+          this.page.title = 'hexo 搭建个人博客';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

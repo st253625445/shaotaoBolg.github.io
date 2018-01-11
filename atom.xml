@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://st253625445.github.io/"/>
-  <updated>2017-10-16T07:32:52.444Z</updated>
+  <updated>2018-01-11T08:25:48.109Z</updated>
   <id>http://st253625445.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&#39;新年伊始&#39;</title>
+    <link href="http://st253625445.github.io/2018/01/11/%E6%96%B0%E5%B9%B4%E4%BC%8A%E5%A7%8B/"/>
+    <id>http://st253625445.github.io/2018/01/11/新年伊始/</id>
+    <published>2018-01-11T02:27:25.000Z</published>
+    <updated>2018-01-11T08:25:48.109Z</updated>
+    
+    <content type="html"><![CDATA[<p>2017悄然过去，2018年已经来到，本文仅对自己去年做下总结，并对新的一年做些展望与计划；</p><h2 id="2017总结"><a href="#2017总结" class="headerlink" title="2017总结"></a>2017总结</h2><p>在过去的一年中：<br>1、React 继续在前端领域占据主导地位，备受期待的 React 16 也正式发布;<br>2、Vue 依然越来越受欢迎，是 React 在因许可证问题被抵制时的主要替代方案之一;<br>3、Angular 跨越了两个大版本：发不了v4以及v5;<br>4、Yarn 快速普及，NPM 跟上脚步;<br>5、下一代 Web 应用模型 — PWA已被迅速采用;<br>6、静态网站卷土重来，Gatsby 等框架使你能够使用 React 和其他现代工具构建静态网站;<br>7、……</p><p>前端技术正在高速发展着，有时真的感觉学的没有更新的快，压力山大啊Σ( ° △ °|||)︴。</p><p>而就我自身而言,工作中并未深入使用过三个框架,还是以jquery为主的开发,技术上并未深入掌握新的东西,突然有种罪恶感：不进步就是在退步。今年需要多放些精力在自我提升上。<br>谨记！！！！！</p><h2 id="2018展望"><a href="#2018展望" class="headerlink" title="2018展望"></a>2018展望</h2><p>先说下今年的趋势把：<br>1、PWA的发展毋庸置疑；<br>2、三架马车依旧会发展迅猛；<br>3、TypeScript会更加火热；<br>4、flex和grid布局更加流行；</p><p>当然还有其他的技术趋势，了解不多就不一一列举。<br>同时给自己18年定个目标,职能上要转为中高级,同时：<br>1、React 为主 VUE为辅的前端框架掌握；<br>2、ES6的学习，日常开发中能够熟练使用ES6进行开发；<br>3、flex布局的学习，并成为日常使用；<br>4、webpack工具掌握精通；<br>5、js设计模式的深入学习，代码的规范化，开发健壮的代码；<br>6、开发整合出一个自己的 js库；<br>7、了解下pwa、TS 能够开发一两个项目</p><p>目标不大，相信自己可以的。<br>年底回来挖坟。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;2017悄然过去，2018年已经来到，本文仅对自己去年做下总结，并对新的一年做些展望与计划；&lt;/p&gt;
+&lt;h2 id=&quot;2017总结&quot;&gt;&lt;a href=&quot;#2017总结&quot; class=&quot;headerlink&quot; title=&quot;2017总结&quot;&gt;&lt;/a&gt;2017总结&lt;/h2&gt;&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JS 数组使用心得笔记</title>
